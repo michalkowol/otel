@@ -1,9 +1,9 @@
 services:
-  n8n:
+  ollama:
     image: ollama/ollama:0.21.2
     restart: unless-stopped
     volumes:
-      - ollama_storage:/home/node/.ollama
+      - ollama_storage:/home/node/.olla
     networks:
       - dokploy-network
 
