@@ -1,0 +1,15 @@
+services:
+  n8n:
+    image: ollama/ollama:0.21.2
+    restart: unless-stopped
+    volumes:
+      - ollama_storage:/home/node/.ollama
+    networks:
+      - dokploy-network
+
+volumes:
+  ollama_storage:
+
+networks:
+  dokploy-network:
+    external: true
