@@ -16,6 +16,8 @@ services:
     entrypoint: /bin/sh
     environment:
       - OLLAMA_HOST=ollama:11434
+    networks:
+      - dokploy-network
     command:
       - "-c"
       - "sleep 30; ollama pull llama3.2:3b"
