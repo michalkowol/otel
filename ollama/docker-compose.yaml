@@ -3,9 +3,20 @@ services:
     image: ollama/ollama:0.21.2
     restart: unless-stopped
     volumes:
-      - ollama_storage:/home/node/.olla
+      - ollama_storage:/home/node/.ollama
     networks:
       - dokploy-network
+
+  init-ollama:
+    image: ollama/ollama:0.21.2
+    volumes:
+      - ollama_storage:/home/node/.ollama
+    entrypoint: /bin/sh
+    environment:
+      - OLLAMA_HOST=ollama:11434
+    command:
+      - "-c"
+      - "sleep 3; ollama pull llama3.2:latest; ollama pull gemma3:latest"
 
 volumes:
   ollama_storage:
