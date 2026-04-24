@@ -14,9 +14,13 @@ Standalone OpenTelemetry Collector (`contrib` distribution) that receives OTLP d
 
 Copy `.env.example` to `.env` and set your `NEW_RELIC_LICENSE_KEY` before starting.
 
+### [ollama](ollama/)
+
+[Ollama](https://ollama.com/) inference server for running large language models locally. Includes an init container that automatically pulls the `llama3.2:3b` model on first start.
+
 ### [n8n](n8n/)
 
-[n8n](https://n8n.io/) workflow automation platform.
+[n8n](https://n8n.io/) workflow automation platform. Configured with Europe/Warsaw timezone and secure cookies.
 
 ## Usage
 
