@@ -3,14 +3,14 @@ services:
     image: ollama/ollama:0.21.2
     restart: unless-stopped
     volumes:
-      - ollama_storage:/home/node/.ollama
+      - ollama_storage:/root/.ollama
 
   init-ollama:
     image: ollama/ollama:0.21.2
     depends_on:
       - ollama
     volumes:
-      - ollama_storage:/home/node/.ollama
+      - ollama_storage:/root/.ollama
     entrypoint: /bin/sh
     environment:
       - OLLAMA_HOST=ollama:11434
