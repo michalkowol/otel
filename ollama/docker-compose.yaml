@@ -9,6 +9,8 @@ services:
 
   init-ollama:
     image: ollama/ollama:0.21.2
+    depends_on:
+      - ollama
     volumes:
       - ollama_storage:/home/node/.ollama
     entrypoint: /bin/sh
