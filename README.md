@@ -16,7 +16,7 @@ Copy `.env.example` to `.env` and set your `NEW_RELIC_LICENSE_KEY` before starti
 
 ### [ollama](ollama/)
 
-[Ollama](https://ollama.com/) inference server for running large language models locally. Includes an init container that automatically pulls the `llama3.2:3b` model on first start.
+[Ollama](https://ollama.com/) inference server for running large language models locally. Includes an init container that automatically pulls `llama3.2:3b`, `gemma4:e4b`, and `gemma3:4b` models on first start. Connects to an external `dokploy-network`.
 
 ### [n8n](n8n/)
 
