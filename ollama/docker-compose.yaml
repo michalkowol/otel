@@ -1,6 +1,6 @@
 services:
   ollama:
-    image: ollama/ollama:0.21.2
+    image: ollama/ollama:0.22.0
     restart: unless-stopped
     volumes:
       - ollama_storage:/root/.ollama
@@ -8,7 +8,7 @@ services:
       - dokploy-network
 
   init-ollama:
-    image: ollama/ollama:0.21.2
+    image: ollama/ollama:0.22.0
     depends_on:
       - ollama
     volumes:
