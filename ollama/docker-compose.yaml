@@ -6,7 +6,10 @@ services:
       - ollama_storage:/root/.ollama
     networks:
       - dokploy-network
-
+    deploy:
+      resources:
+        limits:
+          cpus: "3.0"
   init-ollama:
     image: ollama/ollama:0.22.1
     depends_on:
