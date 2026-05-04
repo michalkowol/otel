@@ -1,6 +1,6 @@
 services:
   ollama:
-    image: ollama/ollama:0.22.1
+    image: ollama/ollama:0.23.0
     restart: unless-stopped
     volumes:
       - ollama_storage:/root/.ollama
@@ -11,7 +11,7 @@ services:
         limits:
           cpus: "3.0"
   init-ollama:
-    image: ollama/ollama:0.22.1
+    image: ollama/ollama:0.23.0
     depends_on:
       - ollama
     volumes:
